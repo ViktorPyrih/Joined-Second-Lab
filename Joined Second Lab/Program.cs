@@ -11,6 +11,7 @@ namespace Joined_Second_Lab
         static void Main(string[] args)
         {
             Console.Write("Hello World!!!");
+            Console.Write("-Hello!!!");
         }
     }
 }
