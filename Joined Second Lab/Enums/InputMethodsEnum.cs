@@ -8,7 +8,7 @@ namespace Joined_Second_Lab
 {
     public enum InputMethodsEnum
     {
-        RANDOM,
+        RANDOM = 1,
         OWN
     }
 }

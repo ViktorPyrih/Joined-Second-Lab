@@ -8,9 +8,9 @@ namespace Joined_Second_Lab
 {
     public enum NamesEnum
     {
-        VIKTOR,
-        MAKSYM,
-        MYKYTA,
+        VIKTOR = 1,
+        MYKYTA = 2,
+        MAKSYM = 3,
         REINPUT,
         RETURN,
         EXIT

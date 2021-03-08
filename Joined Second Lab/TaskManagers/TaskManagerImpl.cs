@@ -68,14 +68,54 @@ namespace Joined_Second_Lab
             throw new NotImplementedException();
         }
 
-        public void doTask3_1(int[] array)
+        private Max_Savyenkov_Service.Service_1 service2 = new Max_Savyenkov_Service.Service_1();
+        public int[] doTask3_1(int[] array)
         {
-            throw new NotImplementedException();
+            int count;
+            service2.findCountOfNegativeElements(array, out count);
+            int[] arr = new int[array.Length + count];
+            for (int i = 0, j = 0; i < array.Length; i++, j++)
+            {
+                if (array[i] < 0)
+                {
+                    arr[j++] = Math.Abs(array[i]);
+                    j++;
+                }
+                else
+                    arr[j] = array[i];
+            }
+            return arr;
         }
 
-        public void doTask3_2(int[][] array)
+        public int[][] doTask3_2(int[][] array)
         {
-            throw new NotImplementedException();
+            int index;
+            service2.findMaxElem(array, out index);
+            int[][] arr = new int[array.GetLength(0) + 1][];
+            for (int i = 0, k = 0; i < arr.GetLength(0); i++, k++)
+            {
+                for (int j = 0; j < array[0].GetLength(0); j++)
+                {
+                    if (i == index - 1)
+                    {
+                        int[] zeros = new int[array[0].GetLength(0)];
+                        for (int l = 0; l < array[0].GetLength(0); l++)
+                        {
+                            zeros[i] = 0;
+                        }
+                        zeros.CopyTo(arr[i],0);
+                    }
+                    else
+                    {
+                        array[k].CopyTo(arr[i],0);
+                    }
+                }
+                if (i == index - 1)
+                {
+                    i++;
+                }
+            }
+            return arr;
         }
 
         public void doTask3_3()

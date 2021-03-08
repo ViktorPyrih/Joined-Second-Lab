@@ -36,7 +36,7 @@ namespace Joined_Second_Lab
             {
                 case TaskEnum.TASK_1:
                     int[] array;
-                    Console.WriteLine("Print method of input for an array:");
+                    Console.WriteLine("Print method of input for an array (RANDOM/OWN):");
                     InputMethodsEnum method = input.setMethod();
                     if (method.Equals(InputMethodsEnum.OWN)) 
                     {
@@ -50,7 +50,11 @@ namespace Joined_Second_Lab
                     output.outArray(array);
                 Task1:
                     flag = true;
-                    Console.WriteLine("Choose the developer's name for TASK_1, return option('RETURN'), reinput option('REINPUT') or exit option('EXIT'):");
+                    Console.WriteLine("Choose the developer's name for TASK_1\n" +
+                        "VIKTOR\n" +
+                        "MYKYTA\n" +
+                        "MAKSYM\n" +
+                        " return option('RETURN')\n reinput option('REINPUT')\n or exit option('EXIT'):");
                     NamesEnum name = input.setName();
                     switch (name)
                     {
@@ -75,7 +79,7 @@ namespace Joined_Second_Lab
                     goto Task1;
                 case TaskEnum.TASK_2:
                     int[][] arr;
-                    Console.WriteLine("Print method of input for an array:");
+                    Console.WriteLine("Print method of input for an array (RANDOM/OWN):");
                     method = input.setMethod();
                     if (method.Equals(InputMethodsEnum.OWN)) 
                     {
@@ -89,7 +93,11 @@ namespace Joined_Second_Lab
                     output.outArray(arr);
                 Task2:
                     flag = true;
-                    Console.WriteLine("Choose the developer's name for TASK_2, return option('RETURN') or exit option('EXIT'):");
+                    Console.WriteLine("Choose the developer's name for TASK_2\n" +
+                        "VIKTOR\n" +
+                        "MYKYTA\n" +
+                        "MAKSYM\n" +
+                        " return option('RETURN')\n or exit option('EXIT'):");
                     name = input.setName();
                     switch (name)
                     {
@@ -114,12 +122,16 @@ namespace Joined_Second_Lab
                     goto Task2;
                 case TaskEnum.TASK_3:
                     flag = true;
-                    Console.WriteLine("Choose the developer's name for TASK_3, return option('RETURN') or exit option('EXIT'):");
+                    Console.WriteLine("Choose the developer's name for TASK_3\n" +
+                        "VIKTOR\n" +
+                        "MYKYTA\n" +
+                        "MAKSYM\n" +
+                        " return option('RETURN')\n or exit option('EXIT'):");
                     name = input.setName();
                     switch (name)
                     {
                         case NamesEnum.VIKTOR:
-                            Console.WriteLine("Print method of input for an array:");
+                            Console.WriteLine("Print method of input for an array (RANDOM/OWN):");
                             method = input.setMethod();
                             if (method.Equals(InputMethodsEnum.OWN))
                             {
