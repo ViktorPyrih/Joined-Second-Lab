@@ -11,9 +11,9 @@ namespace Joined_Second_Lab
 
         public void outArray(int[][] array) 
         {
-            foreach (int[] arr in array) 
+            foreach (int[] arr in array)
             {
-                foreach (int e in arr) 
+                foreach (int e in arr)
                 {
                     Console.Write("{0, -5}", e);
                 }

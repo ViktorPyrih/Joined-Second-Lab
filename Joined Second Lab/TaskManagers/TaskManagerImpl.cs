@@ -91,28 +91,24 @@ namespace Joined_Second_Lab
         {
             int index;
             service2.findMaxElem(array, out index);
-            int[][] arr = new int[array.GetLength(0) + 1][];
-            for (int i = 0, k = 0; i < arr.GetLength(0); i++, k++)
+            int[][] arr = new int[array.Length + 1][];
+            for (int i = 0; i < arr.Length; i++)
+                arr[i] = new int[array[0].Length];
+            for (int i = 0, k = 0; i < arr.Length; i++, k++)
             {
-                for (int j = 0; j < array[0].GetLength(0); j++)
+                if (i == index)
                 {
-                    if (i == index - 1)
+                    int[] zeros = new int[array[0].Length];
+                    for (int l = 0; l < zeros.Length; l++)
                     {
-                        int[] zeros = new int[array[0].GetLength(0)];
-                        for (int l = 0; l < array[0].GetLength(0); l++)
-                        {
-                            zeros[i] = 0;
-                        }
-                        zeros.CopyTo(arr[i],0);
+                        zeros[i] = 0;
                     }
-                    else
-                    {
-                        array[k].CopyTo(arr[i],0);
-                    }
-                }
-                if (i == index - 1)
-                {
+                    zeros.CopyTo(arr[i], 0);
                     i++;
+                }
+                if(i != index)
+                {
+                    array[k].CopyTo(arr[i], 0);
                 }
             }
             return arr;
@@ -120,7 +116,7 @@ namespace Joined_Second_Lab
 
         public void doTask3_3()
         {
-            throw new NotImplementedException();
+
         }
     }
 }

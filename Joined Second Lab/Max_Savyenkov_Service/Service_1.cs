@@ -37,6 +37,13 @@ namespace Joined_Second_Lab.Max_Savyenkov_Service
             }
         }
 
-
+        public void changeArray(int[][] array, int index)
+        {
+            for (int i = array.Length - 2; i >= index + 1; i--)
+            {
+                array[i + 1] = array[i];
+            }
+            array[index + 1] = new int[array[0].Length];
+        }
     }
 }

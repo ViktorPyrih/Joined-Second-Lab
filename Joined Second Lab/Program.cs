@@ -103,12 +103,17 @@ namespace Joined_Second_Lab
                     {
                         case NamesEnum.VIKTOR:
                             manager.doTask1_2(ref arr);
+                            Console.WriteLine("Resulted array:");
+                            output.outArray(arr);
                             break;
                         case NamesEnum.MYKYTA:
                             manager.doTask2_2(arr);
+                            Console.WriteLine("Resulted array:");
+                            output.outArray(arr);
                             break;
                         case NamesEnum.MAKSYM:
-                            manager.doTask3_2(arr);
+                            Console.WriteLine("Resulted array:");
+                            output.outArray(manager.doTask3_2(arr));
                             break;
                         case NamesEnum.REINPUT:
                             goto Label;
@@ -117,8 +122,6 @@ namespace Joined_Second_Lab
                         default:
                             goto Label1;
                     }
-                    Console.WriteLine("Resulted array:");
-                    output.outArray(arr);
                     goto Task2;
                 case TaskEnum.TASK_3:
                     flag = true;
