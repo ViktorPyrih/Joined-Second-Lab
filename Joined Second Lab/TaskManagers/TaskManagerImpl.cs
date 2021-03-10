@@ -81,10 +81,11 @@ namespace Joined_Second_Lab
             {
                 if (array[i] < 0)
                 {
-                    arr[j++] = Math.Abs(array[i]);
+                    arr[j] = array[i];
                     j++;
+                    arr[j] = Math.Abs(array[i]);
                 }
-                else
+                if (array[i] > 0)
                     arr[j] = array[i];
             }
             return arr;
