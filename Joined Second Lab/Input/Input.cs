@@ -12,21 +12,22 @@ namespace Joined_Second_Lab
         {
             string tmp = Console.ReadLine().Trim();
             TaskEnum operation;
-            if (!Enum.TryParse(tmp, true, out operation))
+            int val;
+            if (int.TryParse(tmp, out val) || !Enum.TryParse(tmp, true, out operation))
             {
                 Console.WriteLine("Unsupported operation! Repeat the input, please!");
                 return setTask();
             }
 
             return operation;
-
         }
 
         public InputMethodsEnum setMethod()
         {
             string tmp = Console.ReadLine().Trim();
             InputMethodsEnum operation;
-            if (!Enum.TryParse(tmp, true, out operation))
+            int val;
+            if (int.TryParse(tmp, out val) || !Enum.TryParse(tmp, true, out operation))
             {
                 Console.WriteLine("Unsupported operation! Repeat the input, please!");
                 return setMethod();
@@ -39,7 +40,8 @@ namespace Joined_Second_Lab
         {
             string tmp = Console.ReadLine().Trim();
             NamesEnum name;
-            if (!Enum.TryParse(tmp, true, out name))
+            int val;
+            if (int.TryParse(tmp, out val) || !Enum.TryParse(tmp, true, out name))
             {
                 Console.WriteLine("Unsupported operation! Repeat the input, please!");
                 return setName();

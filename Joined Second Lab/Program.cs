@@ -184,7 +184,7 @@ namespace Joined_Second_Lab
                             Console.WriteLine("Our arrays:");
                             service2.PrintTwoMatrix(A, B);
 
-                            manager.doTask3_3(ref A,ref B);
+                            manager.doTask3_3(ref A, ref B);
 
                             Console.WriteLine("Resulted array:");
                             service2.PrintTwoMatrix(A, B);

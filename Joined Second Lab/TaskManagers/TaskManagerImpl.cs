@@ -13,21 +13,24 @@ namespace Joined_Second_Lab
         {
             int max, quantity;
             service.findMaxAndItsQuantity(array, out max, out quantity);
-            int[] arr = new int[array.Length + quantity];
-            for (int i = 0, k = 0; i < array.Length; i++, k++) 
-            {
-                if (array[i] == max) 
+            if (max % 2 == 0) {
+                int[] arr = new int[array.Length + quantity];
+                for (int i = 0, k = 0; i < array.Length; i++, k++) 
                 {
-                    arr[k++] = max / 2;
-                    arr[k] = max / 2;
-                } 
-                else
-                {
-                    arr[k] = array[i];
+                    if (array[i] == max) 
+                    {
+                        arr[k++] = max / 2;
+                        arr[k] = max / 2;
+                    } 
+                    else
+                    {
+                        arr[k] = array[i];
+                    }
                 }
+                return arr;
             }
 
-            return arr;
+            return array;
         }
 
         public void doTask1_2(ref int[][] array)

@@ -8,9 +8,9 @@ namespace Joined_Second_Lab
 {
     public enum TaskEnum
     {
-        TASK_1 = 1,
-        TASK_2 = 2,
-        TASK_3 = 3,
+        TASK_1,
+        TASK_2,
+        TASK_3,
         EXIT
     }
 }
