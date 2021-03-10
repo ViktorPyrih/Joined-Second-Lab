@@ -45,5 +45,21 @@ namespace Joined_Second_Lab.Max_Savyenkov_Service
             }
             array[index + 1] = new int[array[0].Length];
         }
+
+        public void PrintTwoMatrix(int[,] A, int[,] B)
+        {
+            Output output = new Output();
+            output.outArray(A);
+            Console.WriteLine("========================");
+            output.outArray(B);
+            Console.WriteLine("========================");
+        }
+
+        public int NumberOfLines()
+        {
+            Console.WriteLine("Input count of lines");
+            int n = int.Parse(Console.ReadLine());
+            return n;
+        }
     }
 }

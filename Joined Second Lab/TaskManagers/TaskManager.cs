@@ -16,6 +16,6 @@ namespace Joined_Second_Lab
         void doTask2_3();
         int[] doTask3_1(int[] array);
         int[][] doTask3_2(int[][] array);
-        void doTask3_3();
+        void doTask3_3(ref int[,] A, ref int[,] B);
     }
 }

@@ -161,7 +161,33 @@ namespace Joined_Second_Lab
                             manager.doTask2_3();
                             break;
                         case NamesEnum.MAKSYM:
-                            manager.doTask3_3();
+                            Max_Savyenkov_Service.Service_1 service2 = new Max_Savyenkov_Service.Service_1();
+                            Console.WriteLine("Print method of input for an array (RANDOM/OWN):");
+                            method = input.setMethod();
+                            int[,] A;
+                            int[,] B;
+                            int n = service2.NumberOfLines();
+                            if (method.Equals(InputMethodsEnum.OWN))
+                            {
+                                Console.WriteLine("Input square matrix A");
+                                A = input.customInputArray3(n);
+                                Console.WriteLine("Input square matrix B");
+                                B = input.customInputArray3(n);
+                            }
+                            else
+                            {
+                                Console.WriteLine("Input square matrix A");
+                                A = input.randomInputArray3(n);
+                                Console.WriteLine("Input square matrix B");
+                                B = input.randomInputArray3(n);
+                            }
+                            Console.WriteLine("Our arrays:");
+                            service2.PrintTwoMatrix(A, B);
+
+                            manager.doTask3_3(ref A,ref B);
+
+                            Console.WriteLine("Resulted array:");
+                            service2.PrintTwoMatrix(A, B);
                             break;
                         case NamesEnum.EXIT:
                             goto Label2;

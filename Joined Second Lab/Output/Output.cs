@@ -20,5 +20,17 @@ namespace Joined_Second_Lab
                 Console.WriteLine();
             }
         }
+
+        public void outArray(int[,] array)
+        {
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                for (int j = 0; j < array.GetLength(0); j++)
+                {
+                    Console.Write("{0, -5}", array[i, j]);
+                }
+                Console.WriteLine();
+            }
+        }
     }
 }

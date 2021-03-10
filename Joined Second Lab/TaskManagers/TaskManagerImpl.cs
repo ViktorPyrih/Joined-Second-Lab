@@ -114,9 +114,49 @@ namespace Joined_Second_Lab
             return arr;
         }
 
-        public void doTask3_3()
+        public void doTask3_3(ref int[,] A, ref int[,] B)
         {
+            List<int> R = new List<int>();
+            int lngth = A.GetLength(0);
 
+            for (int i = 0; i < lngth; i++)
+            {
+                for (int j = 0; j < lngth; j++)
+                {
+                    if (A[i,j] == B[i,j])
+                    {
+                        R.Add(A[i, j]);
+                    }
+                }
+            }
+
+            Console.WriteLine("Input num:");
+            int s = int.Parse(Console.ReadLine());
+
+            int first = R.IndexOf(s);
+            int last = R.LastIndexOf(s);
+
+            int count = 0;
+            for (int i = 0; i < R.Count; i++)
+            {
+                if (R[i] == s)
+                {
+                    count++;
+                }
+            }
+
+            if (count >= 2)
+            {
+                A[first % lngth, last % lngth] = s;
+            }
+            else if (count == 1)
+            {
+                B[last % lngth, first % lngth] = s;
+            }
+            else
+            {
+                Console.WriteLine("There is no number {0} in matrix`s joint elem.", s);
+            }
         }
     }
 }

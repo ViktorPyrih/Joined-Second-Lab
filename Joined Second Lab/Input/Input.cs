@@ -128,6 +128,34 @@ namespace Joined_Second_Lab
             return array;
         }
 
+        public int[,] customInputArray3(int n)
+        {
+            int[,] array = new int[n, n];
+            Console.WriteLine("Print elements of an array as lines:");
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    array[i, j] = int.Parse(Console.ReadLine());
+                }
+            }
+            return array;
+        }
+
+        public int[,] randomInputArray3(int n)
+        {
+            int[,] array = new int[n,n];
+            Random random = new Random();
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    array[i,j] = random.Next(-100, 100);
+                }
+            }
+            return array;
+        }
+
         private int inputInt()
         {
             string s = Console.ReadLine();
