@@ -62,7 +62,7 @@ namespace Joined_Second_Lab
                             array = manager.doTask1_1(array);
                             break;
                         case NamesEnum.MYKYTA:
-                            manager.doTask2_1(array);
+                            array = manager.doTask2_1(array);
                             break;
                         case NamesEnum.MAKSYM:
                             array = manager.doTask3_1(array);
@@ -105,7 +105,7 @@ namespace Joined_Second_Lab
                             manager.doTask1_2(ref arr);
                             break;
                         case NamesEnum.MYKYTA:
-                            manager.doTask2_2(arr);
+                            arr = manager.doTask2_2(arr);
                             break;
                         case NamesEnum.MAKSYM:
                             arr = manager.doTask3_2(arr);

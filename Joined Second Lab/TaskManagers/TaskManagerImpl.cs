@@ -55,15 +55,18 @@ namespace Joined_Second_Lab
 
             return list;
         }
-
-        public void doTask2_1(int[] array)
+        private Mykyta_Bulatnikov_Service.Service_1 service3 = new Mykyta_Bulatnikov_Service.Service_1();
+        public int[] doTask2_1(int[] array)
         {
-            throw new NotImplementedException();
+            array = service3.DeleteTheFirstEven(array);
+            return array;
         }
 
-        public void doTask2_2(int[][] array)
+        public int[][] doTask2_2(int[][] array)
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Please, enter one index of the raw to add it into the array");
+            array = service3.AddRawByNumber(array, int.Parse(Console.ReadLine()));
+            return array;
         }
 
         public void doTask2_3()

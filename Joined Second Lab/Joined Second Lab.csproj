@@ -47,6 +47,7 @@
     <Compile Include="Input\Input.cs" />
     <Compile Include="Enums\InputMethodsEnum.cs" />
     <Compile Include="Max_Savyenkov_Service\Service_1.cs" />
+    <Compile Include="Mykyta_Bulatnikov_Service\Service_1.cs" />
     <Compile Include="Output\Output.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
