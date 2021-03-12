@@ -13,7 +13,7 @@ namespace Joined_Second_Lab
             string tmp = Console.ReadLine().Trim();
             TaskEnum operation;
             int val;
-            if (int.TryParse(tmp, out val) || !Enum.TryParse(tmp, true, out operation))
+            if (int.TryParse(tmp, out val) && (val < 1 || val > 3) || !Enum.TryParse(tmp, true, out operation) )
             {
                 Console.WriteLine("Unsupported operation! Repeat the input, please!");
                 return setTask();
