@@ -7,6 +7,7 @@ namespace Joined_Second_Lab
         public void outArray(int[] array)
         {
             Console.WriteLine(string.Join(" ", array));
+            Console.WriteLine("==================================");
         }
 
         public void outArray(int[][] array) 
@@ -19,6 +20,7 @@ namespace Joined_Second_Lab
                 }
                 Console.WriteLine();
             }
+            Console.WriteLine("==================================");
         }
 
         public void outArray(int[,] array)
@@ -31,6 +33,7 @@ namespace Joined_Second_Lab
                 }
                 Console.WriteLine();
             }
+            Console.WriteLine("==================================");
         }
     }
 }
